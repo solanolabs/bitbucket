@@ -3,7 +3,7 @@
 require 'faraday'
 
 module BitBucket
-  module Request
+  class Request
     class OAuth < Faraday::Middleware
       include BitBucket::Utils::Url
 
@@ -13,8 +13,6 @@ module BitBucket
 
       def call(env)
         # Extract parameters from the query
-        request = Rack::Request.new env
-        env[:url] = URI.parse(request.url) if env[:url].nil?
         params = {  }.update query_params(env[:url])
 
         if (@token and @secret) and (!@token.empty? and !@secret.empty?)
