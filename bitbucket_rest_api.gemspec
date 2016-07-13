@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require File.expand_path('../lib/bitbucket_rest_api/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name          = 'reenhanced_bitbucket_api'
+  gem.name          = 'bitbucket_rest_api'
   gem.authors       = [ "Mike Cochran", "Valentino Stoll" ]
   gem.email         = "valentino@reenhanced.com"
   gem.homepage      = 'https://github.com/reenhanced/bitbucket'
